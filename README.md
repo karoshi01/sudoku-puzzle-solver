@@ -1,27 +1,2 @@
 # soduku-pozzule-solver
-This is a C program that solves any valid 9x9 Sudoku puzzle using a backtracking algorithm. The program takes the puzzle input from the user (with 0 representing empty cells), applies Sudoku rules to validate placements, and attempts to solve the puzzle recursively. If a solution exists, it prints the completed board in a formatted, readable grid.
-Accepts full puzzle input from the user via the console
-     Validates input using standard Sudoku rules:
-        No repeated numbers in any row
-        No repeated numbers in any column
-        No repeated numbers in any 3×3 subgrid
-    Uses recursion and backtracking to explore all valid configurations
-    Prints the original and solved puzzle in a clean, readable format
-    Demonstrates how constraint satisfaction problems can be solved with recursion
-
-How It Works
-    User Input:
-    The user is prompted to enter the values for each cell in the 9x9 grid. 0 is used to represent empty cells.
-    Validation (checkRules function):
-    Before placing any number in an empty cell, the program checks:
-        Is the number already in the current row?
-        Is the number already in the current column?
-        Is the number already in the current 3x3 box?
-    Backtracking (solveSudoku function):
-        The program attempts to place numbers 1 to 9 in each empty cell.
-        If a number is valid, it is placed temporarily.
-        The solver then moves to the next empty cell recursively.
-        If a dead end is reached, it backtracks and tries a new number.
-        This continues until the board is fully filled or deemed unsolvable.
-    Output:
-    If a solution is found, the program prints the solved puzzle with borders and formatting. Otherwise, it notifies that no solution exists.
+a sudoku solver is a program designed to automatically complete a partially filled 9x9 Sudoku puzzle while adhering to the game’s core rules: each number from 1 to 9 must appear exactly once in every row, column, and 3x3 subgrid. This particular solver is implemented in C and uses a well-known algorithm called backtracking to find the solution. The user is prompted to enter the values of the puzzle manually, with 0 indicating empty cells. The solver then scans the grid to find an empty cell and tries placing digits from 1 to 9 in it. For each digit, it checks if the placement is valid—i.e., the number doesn’t already exist in the same row, column, or 3x3 subgrid—using a validation function. If the placement is valid, it temporarily assigns the number to the cell and proceeds recursively to solve the rest of the puzzle. If it reaches a point where no valid number can be placed, it backtracks by undoing the last placement and tries the next possible number. This trial-and-error process continues until the entire grid is filled correctly or the algorithm concludes that no solution exists. Once solved, the program neatly prints both the original and completed puzzles. This approach demonstrates how recursion and constraint-based logic can be effectively used to solve complex problems like Sudoku.
