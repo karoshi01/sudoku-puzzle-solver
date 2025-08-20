@@ -6,26 +6,37 @@ This solver is implemented in C using the backtracking algorithm.
 
 🔹 How It Works : 
 
-The user provides the puzzle manually .
-The solver scans the grid for the next empty cell.
+The user provides the puzzle manually 
+
+The solver scans the grid for the next empty cell
+
 For each empty cell, it tries placing digits 1–9.
-Before placement, it checks validity with a constraint function ensuring the number doesn’t already exist in the same row, column, or 3x3 block.
+
+Before placement, it checks validity with a constraint function ensuring the number doesn’t already exist in the same row, column, or 3x3 block
+
 If valid, it recursively continues solving the rest of the puzzle.
+
 If no number works, the algorithm backtracks (undoes the last step) and tries another possibility.
+
 This continues until the grid is solved or the algorithm concludes no solution exists.
 
 🔹 Features :
 
 Solves any valid Sudoku puzzle (easy → expert).
+
 Uses backtracking recursion for correctness.
+
 Input/Output handled via WinAPI GUI:
+
 Solved cells are highlighted in green.
 
 
 🔹 Tech Stack :
 
 C
+
 Backtracking recursion
+
 Custom Windows API interface
 
 🔹 Demo
